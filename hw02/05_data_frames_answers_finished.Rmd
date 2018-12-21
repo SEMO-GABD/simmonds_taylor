@@ -141,7 +141,8 @@ The code below selects the `name` column of all planets that have rings. Adapt t
 # planets_df and rings_vector are pre-loaded in your workspace
 
 # Adapt the code to select all columns for planets with rings
-planets_df[rings_vector,]
+plantes_df[rings_vector,]
+
 ```
 
 ## 5.10 Only planets with rings but shorter
@@ -154,7 +155,7 @@ Use `subset()` on `planets_df` to select planets that have a diameter smaller th
 # planets_df is pre-loaded in your workspace
 
 # Select planets with diameter < 1
-subset(planets_df, subset = (diameter<1))
+subset(plantes_df, subset = (diameter<1))
 
 #
 ```
