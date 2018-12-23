@@ -76,6 +76,19 @@ kable(head(airquality),
       col.names = c("Ozone (ppb)", "Solar R (lang)", "Wind (mph)", "Temp (°F)", "Month", "Day"))
 ```
 
+```{r}
+head(chickwts)
+```
+
+```{r}
+chicks_lm <- lm(weight ~ feed, data = chickwts)
+
+summary(chicks_lm)
+```
+
+
+```
+```{r}
 
 ```
 
