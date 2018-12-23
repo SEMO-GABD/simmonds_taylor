@@ -2,7 +2,7 @@
 title: "R Notebook"
 author: "Taylor Simmonds"
 date: "'r format(Sys.time(), '%d %B %y')"
-output: html_notebook
+output: html_notebook:
 editor_options: chunk_output_type: inline
 
 ---
@@ -86,9 +86,17 @@ chicks_lm <- lm(weight ~ feed, data = chickwts)
 summary(chicks_lm)
 ```
 
+```{r}
+kable(chickwts)
+```
+SUMMARY
+```
+
 
 ```
-```{r}
+
+```
+
 
 ```
 
