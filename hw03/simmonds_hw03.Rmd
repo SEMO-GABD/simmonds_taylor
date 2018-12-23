@@ -111,6 +111,16 @@ summary(trees_lm)
 xtable(trees_lm) %>% kable()
 ```
 
+
+```
+
+
+```
+
+
+
+```
+
 ```
 
 
