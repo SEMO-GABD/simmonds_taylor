@@ -111,6 +111,9 @@ summary(trees_lm)
 xtable(trees_lm) %>% kable()
 ```
 
+$\chi_c^2 = \sum\frac{(O_i-E_i)^2}{E_i}$
+
+```
 
 ```
 
