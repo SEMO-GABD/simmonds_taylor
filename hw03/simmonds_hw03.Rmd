@@ -92,6 +92,13 @@ kable(chickwts)
 SUMMARY
 ```
 
+```
+```{r}
+xtable(chicks_lm) %>% kable()
+```
+
+```
+
 
 ```
 
