@@ -97,6 +97,20 @@ SUMMARY
 xtable(chicks_lm) %>% kable()
 ```
 
+```{r}
+head(trees)
+```
+
+```{r}
+trees_lm <- lm(Girth ~ Height, data = trees)
+
+summary(trees_lm)
+```
+
+```{r}
+xtable(trees_lm) %>% kable()
+```
+
 ```
 
 
