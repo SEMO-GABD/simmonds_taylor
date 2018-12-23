@@ -66,6 +66,16 @@ kable(head(iris),
       col.names = c("Sepal Length", "Sepal Width", "Sepal Length", "Sepal Width", "Species"))
 ```
 
+```{r}
+head(airquality)
+```
+
+```{r}
+kable(head(airquality),
+      align = c("l", "c", "r", "c", "l"),
+      col.names = c("Ozone (ppb)", "Solar R (lang)", "Wind (mph)", "Temp (°F)", "Month", "Day"))
+```
+
 
 ```
 
