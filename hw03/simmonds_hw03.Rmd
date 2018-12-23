@@ -10,7 +10,8 @@ editor_options: chunk_output_type: inline
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 ```{r}
 library(tidyverse)
-
+library(knitr)
+library(xtable)
 
 ```
 
@@ -46,6 +47,23 @@ ansc %>%
     stdev_y = sd(y)
   
   )
+```
+
+```{r}
+ansc %>% ggplot(aes(x,y, color = dataset)) +
+  geom_point() +
+  facet_wrap(~dataset, ncol = 2)
+
+```
+
+```{r}
+head(iris)
+```
+
+```{r}
+kable(head(iris), 
+      align= c("l", "c", "r", "c", "l"),
+      col.names = c("Sepal Length", "Sepal Width", "Sepal Length", "Sepal Width", "Species"))
 ```
 
 
