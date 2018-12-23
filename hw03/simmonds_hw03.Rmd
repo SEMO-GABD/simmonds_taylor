@@ -1,0 +1,18 @@
+---
+title: "R Notebook"
+author: "Taylor Simmonds"
+date: "'r format(Sys.time(), '%d %B %y')"
+output: html_notebook: 
+editor_options: chunk_output_type: inline
+
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+```{r}
+library(tidyverse)
+
+```
+
+
+```
+
