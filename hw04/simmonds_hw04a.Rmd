@@ -60,39 +60,64 @@ drv describes the style of driving for f = front, r=rear wheel drive and 4=4wd
 
 
 **5:** What happens if you make a scatterplot of `class` vs `drv`? Why is the plot not useful?
-The driving style of the car and the type of car show no significant data trends when graphed together, these factors alone do not help in comparing fuel economy across various cars. 
+The driving style of the car and the type of car show no significant data trends when graphed together, these factors alone do not help in comparing fuel economy across various cars.
+
+
+### Section 3.3 
+Shows a scatterplot of displ and hwy
+```{r}
+?points
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x=displ, y=hwy, color = "blue"))
+ 
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x=displ, y=hwy), color="blue", pch=1, cex=2)
+```
+Display a scatterplot for drv/class
 ```{r}
 ggplot(data = mpg) +
-  geom_point(mapping = aes(x=displ, y=hwy, color = class))
+  geom_point(mapping = aes(x=drv, y=class), color="blue", pch=1, cex=2)
+```
+Applying two color aesthetics to the same variable
+```{r}
+ggplot2::data = mpg +
+  geom_point(mapping = aes(x=displ, y=hwy), color="blue", color="red", pch=1, cex=2)
+```
+Applying an aesthetic to something other than a variable name.
+```{r}
+ggplot2::data = mpg +
+  geom_point(mapping =aes(colour = displ < 5))
 ```
 
-
 ### Section 3.3: Aesthetic mappings
-
 
 #### Section 3.3 questions
 
 **1:** What’s gone wrong with this code? Why are the points not blue?
-aes() will automatically assign a unique aesthetic to each variable unless otherwise specified. 
+It needs to be written (mapping = aes(x=displ, y=hwy), color="blue"). 
 
 **2:** Which variables in `mpg` are categorical? Which variables are continuous? (*Hint:* type `?mpg` to read the documentation for the dataset). How can you see this information when you run mpg?
-
+Model name, type of transmission, drv, fl, and class. When mpg? is ran a help window shows in the bottom right of the screen. 
 
 **3:** Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables? **Note:** You need several code chunks here to answer this question.
-
+The graphs with categorical variables do not show important correlations, while the continous variables show some sort of importance in the data.
 
 **4:** What happens if you map the same variable to multiple aesthetics?
 
+An error appears when multiple aesthetics are mapped to the same variable.
 
 **5:** What does the stroke aesthetic do? What shapes does it work with? (*Hint:* use `?geom_point`)
-
+The stroke aesthetic allows for syombols to have a color and a fill, it works for shapes 21-24.
 
 
 **6:** What happens if you map an aesthetic to something other than a variable name, like `aes(colour = displ < 5)`?
-
+An error for incompatible methods appears, only specific colors can be assigned to "color", numerical values would not work.
 
 ### Section 3.5: Facets
 
+```{r}
+
+```
 
 
 #### Section 3.5 questions
